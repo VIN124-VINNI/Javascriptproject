@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: url('../images/image.png');
+    background-repeat: no-repeat;
+    /* background-size:cover; */
+    /* height: 45rem; */
+    background-size: cover;
+     /* background-position: 100% 200%;  */
+    
+    font-family: "Montserrat", sans-serif;
+
+  }
+  
+  .container {
+    /* background-image: url('https://static.vecteezy.com/system/resources/thumbnails/008/079/335/small_2x/empty-showcase-abstract-pastel-color-background-3d-illustration-free-vector.jpg'); */
+    padding: 20px;
+    
+    background-color: whitesmoke;
+    opacity: 0.78;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 50px;
+  
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  button {
+    font-size: 14px;
+    background-color:rgb(216, 84, 172);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(235, 235, 51, 0.545);
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 24px;
+    color:black;
+    font-weight: bold;
+  }
+  @media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input[type="date"], button {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+
+    p#result {
+        font-size: 16px;
+    }
+}
+
+/* Laptops (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="date"], button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    p#result {
+        font-size: 14px;
+    }
+}
+
+/* Small screens like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input[type="date"], button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    p#result {
+        font-size: 12px;
+    }
+}

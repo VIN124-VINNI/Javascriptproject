@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../signup/signup.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="signupPage">
+        <form action="" id="signupForm">
+            <h2>Sign Up</h2>
+            <div class="userInput">
+                <label for="userName">Name :</label>
+                <input type="text" name="" id="userName" placeholder="Enter Name here" required>
+            </div>
+            <div class="userInput">
+                <label for="userEmail">Email :</label>
+                <input type="email" name="" id="userEmail" placeholder="Enter Email here" required>
+            </div>
+            <div class="userInput">
+                <label for="pswd">Password :</label>
+                <input type="password" name="" id="pswd" placeholder="Enter Password here" required>
+            </div>
+            <p id="error"></p>
+            <button id="btn" type="submit">Sign Up</button>
+        </form>
+        <p class="existedAccount">
+            <b>Already have an account ?</b><a href="../login/login.html">login</a>
+        </p>
+    </div>
+    <audio id="signup" src=""></audio>
+    <script src="../signup/signup.js"></script>
+</body>
+
+</html>

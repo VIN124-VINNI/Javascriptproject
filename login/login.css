@@ -1,0 +1,235 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gray;
+    /* background: linear-gradient(to bottom left,#ff4545,#00ff99,#006aff,#ff0095,#ff4545);/ */
+    /* background-size: 100% 100%; */
+    background-image: url('../images/login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: gradientAnimation 6s infinite alternate;
+    color: #ffffff;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;   
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.loginpage {
+    margin: 0 auto;
+    padding: 2em;
+    width: 90%; 
+    max-width: 400px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits:false;
+}
+.loginpage::after,.signupPage::before{
+
+  content: '';
+  position: absolute;
+  height : 100%;
+  width: 100%;
+  box-shadow:2px orange;
+  top:50%;
+  left:50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+
+}
+.loginpage::before{
+    filter:blur(1.5rem);
+    opacity:0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0f2862;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+.userInput{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width:80%;
+}
+label{
+    font-size: 15px;
+    color: black;
+    
+}
+.userInput input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.userInput input:focus {
+    outline: none;
+    border-color: #044ffd;
+    box-shadow: 0 0 5px rgba(15, 40, 98, 0.3);
+} 
+
+#error{
+    color: red;
+    font-size: 0.9em;
+    margin: -10px 0 15px;
+}
+
+#btn {
+    background-color: #044ffd;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn:hover {
+    background-color: #2b4d8f;
+    transform: translateY(-1px);
+}
+
+#btn:active {
+    transform: translateY(0);
+}
+
+.existedAccount{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #044ffd;
+}
+
+.existedAccount a {
+    color: #044ffd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.existedAccount a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .loginPage {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .newAccount a {
+        font-size: 12px;
+    }
+}
+
+/* Medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .loginPage {
+        width: 70%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input, button {
+        font-size: 15px;
+    }
+
+    .newAccount a {
+        font-size: 13px;
+    }
+}
+
+/* Very small screens (max-width: 400px) */
+@media (max-width: 400px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .newAccount a {
+        font-size: 10px;
+    }
+}
